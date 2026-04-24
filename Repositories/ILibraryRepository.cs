@@ -6,5 +6,10 @@ public interface ILibraryRepository
 {
     void AddBooks(Book book);
     void AddMembers(Member member);
-    bool SaveChanges();
+    Task SaveChanges();
+    
+    Task<Book> GetBookById(int id);
+    void AddLoan(Loan loan);
+    
+    Task<IEnumerable<Loan>> GetAllLoans();
 }
