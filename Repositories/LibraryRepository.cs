@@ -12,9 +12,14 @@ public class LibraryRepository:ILibraryRepository
         _context = context;
     }
 
-    public void Add(Book book)
+    public void AddBooks(Book book)
     {
         _context.books.Add(book);
+    }
+
+    public void AddMembers(Member member)
+    {
+        _context.Add(member);
     }
 
     public bool SaveChanges()

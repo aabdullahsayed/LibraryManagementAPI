@@ -4,6 +4,7 @@ namespace LibraryManagementAPI.Repositories;
 
 public interface ILibraryRepository
 {
-    void Add(Book book);
+    void AddBooks(Book book);
+    void AddMembers(Member member);
     bool SaveChanges();
 }

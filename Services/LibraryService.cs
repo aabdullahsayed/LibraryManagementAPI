@@ -13,8 +13,15 @@ public class LibraryService:ILibraryService
     }
     public Book AddBook(Book book)
     {
-        _repository.Add(book);
+        _repository.AddBooks(book);
         _repository.SaveChanges();
         return book;
+    }
+
+    public Member AddMember(Member member)
+    {
+        _repository.AddMembers(member);
+        _repository.SaveChanges();
+        return member;
     }
 }
