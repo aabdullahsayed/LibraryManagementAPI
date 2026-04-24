@@ -7,4 +7,6 @@ public class Loan
     public int MemberId { get; set; }
     public DateTime BorrowedAt { get; set; }
     public DateTime DueDate { get; set; }
+    public Book book { get; set; }
+    public Member member { get; set;}
 }
